@@ -1,33 +1,30 @@
+# 🚀 Automatizando Tarefas com AWS Lambda e S3
 
-- **README.md** → Documentação completa do projeto.  
-- **/src/lambda_function.py** → Código da função Lambda.  
-- **notas.md** → Anotações pessoais e comandos úteis utilizados no desenvolvimento.  
+## 📘 Descrição do Projeto
+Este repositório foi desenvolvido como parte do desafio da **Digital Innovation One (DIO)**, com o objetivo de aplicar na prática os conhecimentos adquiridos sobre **AWS Lambda Functions** e **Amazon S3**.  
+
+O projeto consiste em criar uma **função Lambda** que é automaticamente acionada quando um arquivo é enviado para um **bucket S3**, gerando **logs no CloudWatch** com informações sobre o evento.  
 
 ---
 
-## 🚀 Passo a Passo da Implementação
+## 🎯 Objetivos de Aprendizagem
+- Aplicar os conceitos aprendidos nas aulas em um ambiente prático.  
+- Automatizar tarefas utilizando **AWS Lambda** e **Amazon S3**.  
+- Documentar o processo técnico de forma clara e organizada.  
+- Utilizar o **GitHub** como ferramenta de compartilhamento técnico.  
 
-1. **Criação do bucket S3**  
-   - Criar um bucket para armazenar os arquivos de teste.  
-   - Ativar a opção de eventos do S3 para acionar a função Lambda em uploads.  
+---
 
-2. **Criação da Função Lambda**  
-   - Criar a função no **AWS Lambda** com runtime **Python 3.x**.  
-   - Adicionar o código responsável por registrar logs no **CloudWatch**.  
+## ⚙️ Tecnologias Utilizadas
+- **AWS Lambda**  
+- **Amazon S3**  
+- **Amazon CloudWatch**  
+- **AWS IAM (permissões)**  
+- **Python 3.x**  
+- **GitHub**
 
-   Exemplo de código:
-   ```python
-   import json
-   import logging
+---
 
-   logger = logging.getLogger()
-   logger.setLevel(logging.INFO)
+## 🧩 Estrutura do Repositório
 
-   def lambda_handler(event, context):
-       logger.info("Evento recebido do S3:")
-       logger.info(json.dumps(event))
-       return {
-           'statusCode': 200,
-           'body': json.dumps('Logs gerados com sucesso!')
-       }
 
